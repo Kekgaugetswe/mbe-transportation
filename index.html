@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore MBE Transportation shuttle, school and group transport services and prepare a quote enquiry."
+    />
+    <title>MBE Transportation | Plan your journey</title>
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script defer src="assets/vendor/leaflet/leaflet.js"></script>
+    <script defer src="scripts/map-config.js"></script>
+    <script defer src="scripts/journey.js"></script>
+    <script defer src="scripts/locations.js"></script>
+    <script defer src="scripts/address-search.js"></script>
+    <script defer src="scripts/enquiry.js"></script>
+    <script defer src="scripts/navigation.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="./"
+        ><img src="assets/logo.png" alt="" /><span class="wordmark"
+          ><strong>MBE</strong>Transportation (Pty) Ltd</span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#fleet">Our Fleet</a>
+        <a href="#safety">Safety &amp; Reliability</a>
+        <a class="pill" href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" id="home">
+        <div class="intro">
+          <h1>Shuttle &amp; Charter<br />Transport <em>Made Easy</em></h1>
+          <p>
+            Safety, reliability, efficiency, professionalism, and punctuality.
+          </p>
+          <img
+            class="scene"
+            src="assets/home-shuttle-minibuses.jpg"
+            alt="Illustrative MBE passenger shuttle minibuses on a scenic road with mountains in the background"
+          />
+        </div>
+        <aside class="card journey-card" aria-labelledby="journey-title">
+          <span class="eyebrow">PLAN YOUR JOURNEY</span>
+          <h2 id="journey-title">Shuttle &amp; charter enquiries</h2>
+          <ul class="fleet-list"><li>15-Seater Minibuses</li><li>22-Seater Minibuses</li><li>60-Seater Buses</li></ul>
+          <a class="email-action" href="#enquiry">Prepare my enquiry →</a>
+          <small>Request a quotation. Vehicle availability and reservations require confirmation by MBE.</small>
+        </aside>
+      </section>
+      <!-- profile:start -->
+
+<section class="content" id="about" aria-labelledby="about-title">
+  <span class="eyebrow">MBE TRANSPORTATION</span>
+  <h2 id="about-title">About Us</h2>
+  <div class="overview"><p>MBE Transportation (Pty) Ltd is a registered professional transportation and fleet services company dedicated to excellence in every journey. With Registration No: 2024/686638/07 and CSD No: MAAA1564711, we are fully compliant and committed to industry standards.</p>
+<p>Our core focus areas are safety, reliability, efficiency, professionalism, and punctuality. We understand that transportation is more than moving people from point A to B—it&#39;s about trust, comfort, and peace of mind.</p></div>
+  <div class="purpose-grid">
+    <article><h3>Vision</h3><p>To become a leading and trusted transportation service provider known for reliability, safety, and exceptional customer service.</p>
+<p>At MBE Transportation, we envision a future where every journey is seamless, secure, and exceeds expectations. We strive to set the industry standard for professional transport solutions across South Africa.</p></article>
+    <article><h3>Our Mission</h3><p>To deliver professional and dependable transport solutions through efficient operations, skilled personnel, and a commitment to continuous improvement and customer satisfaction.</p>
+<p>At MBE Transportation, we are driven by purpose and dedicated to exceeding expectations with every journey we undertake.</p></article>
+  </div>
+  <h3 class="subheading">Our Core Values</h3>
+  <div class="values-grid"><article><h4>Passion</h4><p>We are dedicated to excellence in everything we do. Our team brings enthusiasm and commitment to every journey, ensuring exceptional service delivery.</p></article>
+<article><h4>Respect</h4><p>We treat all clients, partners, and colleagues with dignity and professionalism. Every interaction reflects our commitment to building lasting relationships.</p></article>
+<article><h4>Honour</h4><p>We operate with integrity and humility in all our services. Our word is our bond, and we take pride in honest, transparent business practices.</p></article>
+<article><h4>Care</h4><p>We put customers first in every decision. Your safety, comfort, and satisfaction are at the heart of our transportation services.</p></article></div>
+</section>
+<section class="content services-section" id="services" aria-labelledby="services-title">
+  <span class="eyebrow">OUR SERVICES</span>
+  <h2 id="services-title">Our Services</h2>
+  <ol class="service-list"><li><span class="service-number" aria-hidden="true">01</span><h3>15-Seater Minibuses</h3></li>
+<li><span class="service-number" aria-hidden="true">02</span><h3>22-Seater Minibuses</h3></li>
+<li><span class="service-number" aria-hidden="true">03</span><h3>60-Seater Buses</h3></li>
+<li><span class="service-number" aria-hidden="true">04</span><h3>Airport Transfers &amp; Shuttles</h3></li>
+<li><span class="service-number" aria-hidden="true">05</span><h3>School Transport</h3></li>
+<li><span class="service-number" aria-hidden="true">06</span><h3>Event &amp; Conference Transport</h3></li>
+<li><span class="service-number" aria-hidden="true">07</span><h3>Executive &amp; Long-Distance</h3></li></ol>
+</section>
+<section class="fleet content" id="fleet" aria-labelledby="fleet-title">
+  <img src="assets/fleet.webp" loading="lazy" alt="Coaches pictured in the MBE company profile" />
+  <div><span class="eyebrow">OUR FLEET</span><h2 id="fleet-title">Our Fleet</h2>
+    <ul class="fleet-list"><li>15-Seater Minibuses</li><li>22-Seater Minibuses</li><li>60-Seater Buses</li></ul>
+    <a href="#enquiry">Request a quotation →</a>
+  </div>
+</section>
+<section class="content" id="safety" aria-labelledby="safety-title">
+  <span class="eyebrow">SAFETY &amp; RELIABILITY</span>
+  <h2 id="safety-title">Safety &amp; Reliability</h2>
+  <h3 class="subheading">Service Delivery Process</h3>
+  <ol class="process"><li><span class="step-label">Step 1</span><h4>Professional Drivers</h4><p>Skilled, trained personnel committed to safety and customer service excellence.</p></li>
+<li><span class="step-label">Step 2</span><h4>Strict Maintenance</h4><p>Regular vehicle inspections ensuring fleet reliability and compliance.</p></li>
+<li><span class="step-label">Step 3</span><h4>Route Planning</h4><p>Efficient route optimization for timely arrivals and fuel efficiency.</p></li>
+<li><span class="step-label">Step 4</span><h4>Safety Protocols</h4><p>Drivers follow strict safety procedures and health guidelines.</p></li>
+<li><span class="step-label">Step 5</span><h4>Reliable Delivery</h4><p>Consistent, punctual service that exceeds customer expectations.</p></li></ol>
+  <h3 class="subheading">Health &amp; Safety Commitment</h3>
+  <div class="three-grid"><article><h4>Vehicle Inspections &amp; Maintenance</h4><p>All vehicles undergo scheduled inspections and preventive maintenance to ensure optimal performance, reliability, and passenger safety at all times.</p></article>
+<article><h4>Driver Safety Protocols</h4><p>Our professional drivers undergo rigorous training and adhere to strict safety protocols, ensuring every journey meets the highest standards of care.</p></article>
+<article><h4>Regulatory Compliance</h4><p>MBE Transportation maintains full compliance with all transportation regulations and industry standards, guaranteeing safe and lawful operations.</p></article></div>
+</section>
+<section class="content why-section" aria-labelledby="why-title">
+  <span class="eyebrow">WHY CHOOSE US</span>
+  <h2 id="why-title">Why Choose Us</h2>
+  <div class="three-grid"><article><h3>Professional &amp; Dependable Service</h3><p>Our skilled drivers and efficient operations ensure reliable transport solutions every time. We pride ourselves on punctuality and professionalism in every journey.</p></article>
+<article><h3>Comprehensive Fleet for All Group Sizes</h3><p>From 15-seater minibuses to 60-seater coaches, we have the right vehicle for your needs—whether it&#39;s staff transport, events, or executive travel.</p></article>
+<article><h3>Commitment to Safety &amp; Customer Satisfaction</h3><p>Regular vehicle inspections, strict safety protocols, and a customer-first approach make us your trusted transportation partner.</p></article></div>
+</section>
+<!-- profile:end -->
+      <section class="contact content" id="contact" aria-labelledby="contact-title">
+        <div class="contact-intro">
+          <span class="eyebrow">CONTACT &amp; QUOTATIONS</span>
+          <h2 id="contact-title">Contact &amp; Quotations</h2>
+          <p><!-- email:start -->
+<a href="mailto:mohale.enterprice@gmail.com">mohale.enterprice@gmail.com</a>
+<!-- email:end --></p>
+          <p>Prepare your trip details below, then review and send the enquiry from your email app.</p>
+        </div>
+        <section class="card" id="enquiry" aria-labelledby="enquiry-title">
+          <h2 id="enquiry-title"><img src="assets/logo.png" alt="" />Shuttle enquiry</h2>
+          <form id="planner">
+            <label
+              >Transport service<select id="service">
+                <!-- services:start -->
+<option>15-Seater Minibuses</option>
+<option>22-Seater Minibuses</option>
+<option>60-Seater Buses</option>
+<option>Airport Transfers &amp; Shuttles</option>
+<option>School Transport</option>
+<option>Event &amp; Conference Transport</option>
+<option>Executive &amp; Long-Distance</option>
+<!-- services:end -->
+              </select></label
+            >
+            <div class="fields">
+              <label>Full name<input id="customer-name" required maxlength="100" autocomplete="name" /></label>
+              <label>Phone number (optional)<input id="customer-phone" type="tel" maxlength="40" autocomplete="tel" /></label>
+            </div>
+            <p class="location-help" id="address-help">Start typing a street address or place, including the town or city, then choose a suggestion. South African locations are prioritised.</p>
+            <div class="address-fields">
+              <div class="address-search">
+                <label for="origin">Pickup Address</label>
+                <input id="origin" required maxlength="300" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="origin-suggestions" aria-describedby="address-help origin-search-status" placeholder="Search street address, venue or town" />
+                <ul id="origin-suggestions" class="address-suggestions" role="listbox" aria-label="Pickup Address suggestions" hidden></ul>
+                <p id="origin-search-status" class="location-help" role="status"></p>
+              </div>
+              <div class="address-search">
+                <label for="destination">Drop-off Address</label>
+                <input id="destination" required maxlength="300" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="destination-suggestions" aria-describedby="address-help destination-search-status" placeholder="Search street address, venue or town" />
+                <ul id="destination-suggestions" class="address-suggestions" role="listbox" aria-label="Drop-off Address suggestions" hidden></ul>
+                <p id="destination-search-status" class="location-help" role="status"></p>
+              </div>
+            </div>
+            <div id="journey-map" role="region" aria-label="Route preview: A is pickup, B is drop-off"></div>
+            <p id="map-status" class="location-help" role="status"></p>
+            <p id="route-distance" class="distance-readout" role="status">Choose both addresses to calculate driving distance.</p>
+            <p id="route-note" class="location-help"></p>
+            <div class="route-actions">
+              <button type="button" class="secondary-action" id="retry-route" disabled>Retry driving distance</button>
+              <a id="directions" target="_blank" rel="noopener" hidden>View Google Maps directions ↗</a>
+            </div>
+            <small class="map-credit">Address search: <a href="https://photon.komoot.io/" target="_blank" rel="noopener">Photon / komoot</a> · Routing: <a href="https://routing.openstreetmap.de/about.html" target="_blank" rel="noopener">OSRM / FOSSGIS</a> · Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> · <a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noopener">Report a map issue</a></small>
+            <p class="location-help">Address searches are shared with Photon; map views with OpenStreetMap; selected locations with FOSSGIS for routing. Your name and phone number are only added to your quotation email. <a href="https://www.komoot.com/privacy" target="_blank" rel="noopener">Search privacy</a> · <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">Map privacy</a> · <a href="https://www.fossgis.de/datenschutzerkl%C3%A4rung" target="_blank" rel="noopener">Routing privacy</a></p>
+            <div class="fields">
+              <label>Travel date<input type="date" required id="date" /></label>
+              <label>Passengers<input type="number" required min="1" step="1" id="passengers" placeholder="Group size" /></label>
+            </div>
+            <p id="form-error" role="alert" class="location-help"></p>
+            <button disabled id="prepare">
+              Send Quotation Request <span>↗</span></button
+            ><noscript>Enable JavaScript to prepare a draft.</noscript
+            ><small
+              >“Send Quotation Request” opens your default email application with a draft using its configured sending account. You must send the email yourself. It does not submit a booking or confirm vehicle availability.</small
+            >
+          </form>
+          <button type="button" class="secondary-action" id="copy">Copy quotation details</button>
+          <small id="email-help">If your email app does not open, copy your quotation details and email mohale.enterprice@gmail.com.</small>
+          <small role="status" id="status"></small>
+        </section>
+      </section>
+    </main>
+    <footer>
+      MBE Transportation (Pty) Ltd
+      <!-- registration:start -->
+<span>Company registration 2024/686638/07</span><span>CSD MAAA1564711</span>
+<!-- registration:end -->
+    </footer>
+  </body>
+</html>
