@@ -17,7 +17,7 @@
     if (!form.reportValidity()) return null;
     const journey = globalThis.MBELocations?.getJourney();
     if (!journey) {
-      field('form-error').textContent = 'Choose both addresses from the suggestions and wait for the driving-distance check to finish.';
+      field('form-error').textContent = 'Choose both addresses using a suggestion or Use address as typed. If both are mapped, wait for the distance check.';
       return null;
     }
     return MBEJourney.draft({ ...journey, service: field('service').value,

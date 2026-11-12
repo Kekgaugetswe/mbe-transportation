@@ -5,8 +5,9 @@
   "csd": "MAAA1564711",
   "email": "mohale.enterprice@gmail.com",
   "about": [
-    "MBE Transportation (Pty) Ltd is a registered professional transportation and fleet services company dedicated to excellence in every journey. With Registration No: 2024/686638/07 and CSD No: MAAA1564711, we are fully compliant and committed to industry standards.",
-    "Our core focus areas are safety, reliability, efficiency, professionalism, and punctuality. We understand that transportation is more than moving people from point A to B—it's about trust, comfort, and peace of mind."
+    "MBE Transportation (Pty) Ltd is a registered transportation and fleet services company (registration number 2024/686638/07). We provide safe, reliable and efficient transport, with a focus on punctuality, professionalism and customer service.",
+    "We believe every journey matters. Our aim is to make travel convenient, comfortable and stress-free, and to earn lasting trust through dependable service.",
+    "Moving People. Connecting Destinations"
   ],
   "vision": [
     "To become a leading and trusted transportation service provider known for reliability, safety, and exceptional customer service.",
@@ -16,28 +17,97 @@
     "To deliver professional and dependable transport solutions through efficient operations, skilled personnel, and a commitment to continuous improvement and customer satisfaction.",
     "At MBE Transportation, we are driven by purpose and dedicated to exceeding expectations with every journey we undertake."
   ],
-  "services": ["15-Seater Minibuses", "22-Seater Minibuses", "60-Seater Buses", "Airport Transfers & Shuttles", "School Transport", "Event & Conference Transport", "Executive & Long-Distance"],
+  "services": [
+    "Corporate and executive transportation",
+    "Employee and staff shuttles",
+    "Airport transfers",
+    "Private and group transportation",
+    "Events and charter services"
+  ],
   "values": [
-    {"title": "Passion", "description": "We are dedicated to excellence in everything we do. Our team brings enthusiasm and commitment to every journey, ensuring exceptional service delivery."},
-    {"title": "Respect", "description": "We treat all clients, partners, and colleagues with dignity and professionalism. Every interaction reflects our commitment to building lasting relationships."},
-    {"title": "Honour", "description": "We operate with integrity and humility in all our services. Our word is our bond, and we take pride in honest, transparent business practices."},
-    {"title": "Care", "description": "We put customers first in every decision. Your safety, comfort, and satisfaction are at the heart of our transportation services."}
+    {
+      "title": "Safety First",
+      "description": "We put the safety of passengers, drivers and the communities we serve first. Our drivers approach every journey with care and responsibility."
+    },
+    {
+      "title": "Punctuality",
+      "description": "We plan routes and pick-ups carefully so passengers can depend on us to get them to their destinations on time."
+    },
+    {
+      "title": "Professionalism",
+      "description": "We treat clients and partners with honesty and respect, and take responsibility for the service we provide."
+    },
+    {
+      "title": "Customer Satisfaction",
+      "description": "We listen to what each client needs and plan comfortable, efficient transport around their journey."
+    }
   ],
   "process": [
-    {"title": "Professional Drivers", "description": "Skilled, trained personnel committed to safety and customer service excellence."},
-    {"title": "Strict Maintenance", "description": "Regular vehicle inspections ensuring fleet reliability and compliance."},
-    {"title": "Route Planning", "description": "Efficient route optimization for timely arrivals and fuel efficiency."},
-    {"title": "Safety Protocols", "description": "Drivers follow strict safety procedures and health guidelines."},
-    {"title": "Reliable Delivery", "description": "Consistent, punctual service that exceeds customer expectations."}
+    {
+      "title": "Professional Drivers",
+      "description": "Skilled, trained personnel committed to safety and customer service excellence."
+    },
+    {
+      "title": "Strict Maintenance",
+      "description": "Regular vehicle inspections ensuring fleet reliability and compliance."
+    },
+    {
+      "title": "Route Planning",
+      "description": "Efficient route optimization for timely arrivals and fuel efficiency."
+    },
+    {
+      "title": "Safety Protocols",
+      "description": "Drivers follow strict safety procedures and health guidelines."
+    },
+    {
+      "title": "Reliable Delivery",
+      "description": "Consistent, punctual service that exceeds customer expectations."
+    }
   ],
   "safety": [
-    {"title": "Vehicle Inspections & Maintenance", "description": "All vehicles undergo scheduled inspections and preventive maintenance to ensure optimal performance, reliability, and passenger safety at all times."},
-    {"title": "Driver Safety Protocols", "description": "Our professional drivers undergo rigorous training and adhere to strict safety protocols, ensuring every journey meets the highest standards of care."},
-    {"title": "Regulatory Compliance", "description": "MBE Transportation maintains full compliance with all transportation regulations and industry standards, guaranteeing safe and lawful operations."}
+    {
+      "title": "Vehicle Inspections & Maintenance",
+      "description": "All vehicles undergo scheduled inspections and preventive maintenance to ensure optimal performance, reliability, and passenger safety at all times."
+    },
+    {
+      "title": "Driver Safety Protocols",
+      "description": "Our professional drivers undergo rigorous training and adhere to strict safety protocols, ensuring every journey meets the highest standards of care."
+    },
+    {
+      "title": "Regulatory Compliance",
+      "description": "MBE Transportation maintains full compliance with all transportation regulations and industry standards, guaranteeing safe and lawful operations."
+    }
   ],
   "why": [
-    {"title": "Professional & Dependable Service", "description": "Our skilled drivers and efficient operations ensure reliable transport solutions every time. We pride ourselves on punctuality and professionalism in every journey."},
-    {"title": "Comprehensive Fleet for All Group Sizes", "description": "From 15-seater minibuses to 60-seater coaches, we have the right vehicle for your needs—whether it's staff transport, events, or executive travel."},
-    {"title": "Commitment to Safety & Customer Satisfaction", "description": "Regular vehicle inspections, strict safety protocols, and a customer-first approach make us your trusted transportation partner."}
+    {
+      "title": "Professional & Dependable Service",
+      "description": "Our skilled drivers and efficient operations ensure reliable transport solutions every time. We pride ourselves on punctuality and professionalism in every journey."
+    },
+    {
+      "title": "Vehicles for different group sizes",
+      "description": "Tell us how many people are travelling so we can recommend a vehicle for your group."
+    },
+    {
+      "title": "Commitment to Safety & Customer Satisfaction",
+      "description": "Regular vehicle inspections, strict safety protocols, and a customer-first approach make us your trusted transportation partner."
+    }
+  ],
+  "fleet": [
+    {
+      "category": "Small passenger vehicles",
+      "capacity": "5–7"
+    },
+    {
+      "category": "Passenger vans",
+      "capacity": "8–10"
+    },
+    {
+      "category": "Minibuses",
+      "capacity": "11–16"
+    },
+    {
+      "category": "Midibuses",
+      "capacity": "17–22"
+    }
   ]
 }

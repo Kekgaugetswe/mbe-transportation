@@ -12,7 +12,10 @@ for (const key of ['about', 'vision', 'mission', 'services', 'values', 'process'
     }
   }
 }
-assert.equal(company.services.length, 7);
+assert.equal(company.services.length, 5);
+for (const vehicle of company.fleet) {
+  assert(html.includes(escape(vehicle.category)) && html.includes(escape(vehicle.capacity) + ' seats'));
+}
 assert.equal(company.values.length, 4);
 assert.equal(company.process.length, 5);
 assert.equal(company.safety.length, 3);

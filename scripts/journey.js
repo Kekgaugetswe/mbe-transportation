@@ -41,23 +41,24 @@ globalThis.MBEJourney = (() => {
     return `https://www.google.com/maps/dir/?${params}`;
   }
   function draft({ origin, destination, route, service, date, passengers, routingCredit, customer }) {
+    const mapped = p => Boolean(point(p.lat, p.lng));
     return [
       'Transport quote enquiry for MBE Transportation',
       `Customer: ${customer.name}`,
       `Customer phone: ${customer.phone || 'Not provided'}`,
       `Service: ${service}`,
       `Pickup address: ${origin.address}`,
-      `Pickup coordinates (latitude, longitude): ${coordinates(origin)}`,
+      mapped(origin) && `Pickup coordinates (latitude, longitude): ${coordinates(origin)}`,
       `Destination address: ${destination.address}`,
-      `Destination coordinates (latitude, longitude): ${coordinates(destination)}`,
+      mapped(destination) && `Destination coordinates (latitude, longitude): ${coordinates(destination)}`,
       distanceText(route),
       route.kind === 'road' ? `Routing: ${routingCredit}; OpenStreetMap data. Standard driving estimate; no live traffic or bus-specific restrictions.`
         : 'No driving distance or road route could be calculated. Please confirm the travel distance.',
       `Travel date: ${date}`,
       `Passengers: ${passengers}`,
-      `Google Maps directions: ${directions(origin, destination)}`,
+      mapped(origin) && mapped(destination) && `Google Maps directions: ${directions(origin, destination)}`,
       'Please confirm the route, vehicle suitability, quotation and availability. This is an enquiry, not a confirmed booking.'
-    ].join('\n');
+    ].filter(Boolean).join('\n');
   }
   return { point, coordinates, addresses, roadResult, unavailable, distanceText, directions, draft };
 })();

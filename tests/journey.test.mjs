@@ -160,3 +160,21 @@ test('Send Quotation Request builds a mailto only after validation and includes 
   assert.equal(window.location.href, '');
   assert.match(node('form-error').textContent, /Choose both addresses/);
 });
+
+test('typed pickup and drop-off work independently and edits invalidate confirmation', () => {
+  const app = setup(true);
+  app.select('destination', b);
+  app.input('origin', 'Farm gate 2');
+  app.node('origin-manual').dispatchEvent({ type: 'click' });
+  const mixed = app.ctx.MBELocations.getJourney();
+  assert.equal(mixed.origin.address, 'Farm gate 2');
+  assert.equal(mixed.destination.lat, b.lat);
+  assert.equal(mixed.route.kind, 'unavailable');
+  app.input('destination', 'Community hall');
+  assert.equal(app.ctx.MBELocations.getJourney(), null);
+  app.node('destination-manual').dispatchEvent({ type: 'click' });
+  const text = geo.draft({ ...app.ctx.MBELocations.getJourney(), customer: { name: 'Test' } });
+  assert.match(text, /Farm gate 2/);
+  assert.match(text, /Community hall/);
+  assert.doesNotMatch(text, /coordinates|Google Maps directions| km/);
+});

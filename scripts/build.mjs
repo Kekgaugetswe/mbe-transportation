@@ -18,13 +18,17 @@ const sections = `
 </section>
 <section class="content services-section" id="services" aria-labelledby="services-title">
   <span class="eyebrow">OUR SERVICES</span>
-  <h2 id="services-title">Our Services</h2>
+  <h2 id="services-title">Our Transportation Solutions</h2>
   <ol class="service-list">${company.services.map((name, index) => `<li><span class="service-number" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span><h3>${escape(name)}</h3></li>`).join('\n')}</ol>
 </section>
 <section class="fleet content" id="fleet" aria-labelledby="fleet-title">
-  <img src="assets/fleet.webp" loading="lazy" alt="Coaches pictured in the MBE company profile" />
+  <img src="assets/quantums-and-sprinter.webp" loading="lazy" alt="Fleet illustration showing two Toyota Quantum minibuses alongside a high-roof Mercedes-Benz Sprinter 22-seater" />
   <div><span class="eyebrow">OUR FLEET</span><h2 id="fleet-title">Our Fleet</h2>
-    <ul class="fleet-list">${company.services.slice(0, 3).map(name => `<li>${escape(name)}</li>`).join('')}</ul>
+    <table class="capacity-table">
+      <caption>Passenger fleet capacity</caption>
+      <thead><tr><th scope="col">Vehicle category</th><th scope="col">Passenger capacity</th></tr></thead>
+      <tbody>${company.fleet.map(vehicle => `<tr><th scope="row">${escape(vehicle.category)}</th><td>${escape(vehicle.capacity)} seats</td></tr>`).join('')}</tbody>
+    </table>
     <a href="#enquiry">Request a quotation →</a>
   </div>
 </section>
@@ -43,6 +47,7 @@ const sections = `
 </section>`;
 const replacements = {
   profile: sections,
+  fleetSummary: `<p>Vehicles for groups of ${escape(company.fleet[0].capacity.split('–')[0])} to ${escape(company.fleet.at(-1).capacity.split('–')[1])} passengers.</p>`,
   services: company.services.map(name => `<option>${escape(name)}</option>`).join('\n'),
   email: `<a href="mailto:${escape(company.email)}">${escape(company.email)}</a>`,
   registration: `<span>Company registration ${escape(company.registration)}</span><span>CSD ${escape(company.csd)}</span>`

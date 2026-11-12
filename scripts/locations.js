@@ -2,6 +2,7 @@
   const el = id => document.getElementById(id);
   const geo = MBEJourney, config = MBEMapConfig;
   const points = { origin: null, destination: null }, markers = {};
+  const manual = { origin: null, destination: null };
   const cache = new Map();
   let map, line, route, timer, controller;
   let generation = 0, lastRequest = 0;
@@ -12,7 +13,9 @@
     controller = null;
     route = null;
     if (line) { line.remove(); line = null; }
-    el('route-distance').textContent = 'Choose both addresses to calculate driving distance.';
+    el('route-distance').textContent = manual.origin || manual.destination
+      ? 'MBE will confirm the driving distance for your typed address.'
+      : 'Choose both addresses to calculate driving distance.';
     el('route-note').textContent = '';
     el('directions').hidden = true;
     el('retry-route').disabled = true;
@@ -82,7 +85,14 @@
     timer = setTimeout(() => requestRoute(version), Math.max(450, config.minRequestIntervalMs - (Date.now() - lastRequest)));
   }
   for (const id of Object.keys(points)) {
+    el(id).addEventListener('addressmanual', event => {
+      points[id] = null;
+      manual[id] = event.detail;
+      invalidate();
+      drawMarkers();
+    });
     el(id).addEventListener('input', () => {
+      manual[id] = null;
       invalidate();
       points[id] = null;
       drawMarkers();
@@ -90,6 +100,7 @@
     el(id).addEventListener('addressselected', event => {
       const address = event.detail;
       if (!geo.point(address?.lat, address?.lng) || !address.address) return;
+      manual[id] = null;
       invalidate();
       points[id] = { lat: address.lat, lng: address.lng, address: address.address };
       drawMarkers();
@@ -116,8 +127,16 @@
   }
   globalThis.MBELocations = {
     getJourney() {
+      if (manual.origin || manual.destination) {
+        const endpoints = {};
+        for (const id of Object.keys(points)) {
+          const endpoint = points[id] || { address: manual[id] };
+          if (!endpoint.address || endpoint.address !== el(id).value) return null;
+          endpoints[id] = endpoint;
+        }
+        return { ...endpoints, route: geo.unavailable() };
+      }
       if (!points.origin || !points.destination || !route) return null;
-      // Free-typed text is never accepted as a geocoded address.
       if (Object.entries(points).some(([id, p]) => p.address !== el(id).value)) return null;
       return { origin: { ...points.origin }, destination: { ...points.destination }, route };
     }

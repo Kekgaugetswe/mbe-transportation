@@ -7,6 +7,17 @@
     const input = document.getElementById(id);
     const list = document.getElementById(`${id}-suggestions`);
     const status = document.getElementById(`${id}-search-status`);
+    const manual = document.getElementById(`${id}-manual`);
+    manual.addEventListener('click', () => {
+      const address = input.value.trim();
+      if (!address) return;
+      cancel(); close(); results = [];
+      input.value = address;
+      input.setCustomValidity('');
+      manual.hidden = true;
+      status.textContent = 'Using your typed address. MBE will confirm the distance.';
+      input.dispatchEvent(new CustomEvent('addressmanual', { detail: address }));
+    });
     let results = [], active = -1, version = 0, timer, controller;
     function close() {
       list.hidden = true;
@@ -23,6 +34,7 @@
       const address = results[index];
       if (!address) return;
       cancel(); close();
+      manual.hidden = true;
       input.value = address.address;
       input.setCustomValidity('');
       status.textContent = 'Address selected. Check the location on the map.';
@@ -47,7 +59,7 @@
       list.hidden = items.length === 0;
       input.setAttribute('aria-expanded', String(items.length > 0));
       status.textContent = items.length ? `${items.length} suggestions. Choose the matching address.`
-        : 'No matching addresses found. Try a street or venue name with the town or city.';
+        : 'No matching addresses found. Use the address as typed or refine your search.';
     }
     async function search(query, currentVersion) {
       if (currentVersion !== version) return;
@@ -74,7 +86,7 @@
       } catch {
         if (currentVersion !== version) return;
         close();
-        status.textContent = 'Address search is unavailable. Please try again shortly by editing the address.';
+        status.textContent = 'Address search is unavailable. Use the address as typed or edit it to retry.';
       } finally {
         clearTimeout(timeout);
         if (controller === currentController) controller = null;
@@ -82,7 +94,8 @@
     }
     input.addEventListener('input', event => {
       cancel(); close(); results = [];
-      input.setCustomValidity('Choose an address from the suggestions.');
+      manual.hidden = !input.value.trim();
+      input.setCustomValidity('Select a suggestion or choose Use address as typed.');
       const query = input.value.trim();
       if (event.isComposing || query.length < 3) {
         status.textContent = 'Enter at least 3 characters to search.';

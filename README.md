@@ -20,7 +20,7 @@ Open `http://localhost:8765`. Opening `index.html` directly also displays the si
 
 - About Us: full overview, registration 2024/686638/07 and CSD MAAA1564711.
 - Complete Vision and Our Mission; all four core values and descriptions.
-- All seven service categories, in profile order. The profile provides no individual service descriptions, so none are invented.
+- Five transport services and four passenger fleet categories follow the client’s revised list.
 - Our Fleet: the three stated capacity categories; no fleet quantities are claimed.
 - Safety & Reliability: all five delivery steps and all three health and safety commitments, with full original descriptions in order.
 - Why Choose Us: all three reasons and descriptions.
@@ -44,7 +44,7 @@ The form prepares a local draft. The visitor reviews it and opens an email addre
 
 ## Address search and driving-distance quotations
 
-Customers use **Pickup Address** and **Drop-off Address** autocomplete inputs. They choose a suggestion; its readable address and geographic point are stored together in page memory. Coordinates are never displayed in form controls or a website draft. The map is a preview, with fixed A/B markers; changing either address clears its previous selection and route. Free-typed text is not accepted as a resolved address.
+Customers use **Pickup Address** and **Drop-off Address** autocomplete inputs. They choose a suggestion; its readable address and geographic point are stored together in page memory. Coordinates are never displayed in form controls or a website draft. The map is a preview, with fixed A/B markers; changing either address clears its previous selection and route. Use address as typed accepts a manual endpoint for the enquiry. MBE confirms the distance when either endpoint is manual.
 
 Name is required; phone is optional. The form does not ask for or read the customer’s email address. Their default email application supplies its configured sending account; the customer can choose another account within that app. “Send Quotation Request” validates the form and opens `mailto:mohale.enterprice@gmail.com` synchronously from the click, with a prefilled subject/body. The customer must review and send the email manually. The body includes customer details, service, both resolved addresses and their coordinates, driving distance (or an explicit unavailable status), date, passenger count and a Google Maps directions link. The website does not submit requests, reserve vehicles or confirm availability. A copy button provides a fallback when a mail app is not configured; long mailto URLs remain subject to the customer's mail-client limits.
 
